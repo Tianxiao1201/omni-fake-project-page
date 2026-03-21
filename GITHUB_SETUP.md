@@ -4,6 +4,23 @@
 
 **维护者 GitHub**：[@Tianxiao1201](https://github.com/Tianxiao1201)
 
+## 登录 GitHub 并创建/推送（本机一条命令）
+
+Agent 或 CI **无法代替你登录**：必须在终端里使用 [Personal Access Token](https://github.com/settings/tokens)（至少勾选 **repo**；classic token 即可）。
+
+在本机项目根目录执行：
+
+```bash
+export GITHUB_TOKEN='ghp_你的令牌'
+bash scripts/auth-and-push.sh
+```
+
+脚本会：`gh auth login --with-token` → 若远程尚无仓库则 `gh repo create … --push`，否则直接 `git push -u origin main`。
+
+**请勿**把 Token 提交进仓库或发在聊天里；用一次可 `unset GITHUB_TOKEN`。
+
+---
+
 ## 若你尚未在 GitHub 上创建仓库
 
 1. 打开模板：<https://github.com/eliahuhorwitz/Academic-project-page-template>  
