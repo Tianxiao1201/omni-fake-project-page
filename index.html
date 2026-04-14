@@ -654,12 +654,12 @@
   </section>
 
 
-  <!-- ==================== EXPERIMENTAL RESULTS ==================== -->
+  <!-- ==================== EXPERIMENTAL EXAMPLES ==================== -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
       <div class="has-text-centered">
-        <span class="section-badge">Experiments</span>
-        <h2 class="title is-3">Experimental Results</h2>
+        <span class="section-badge">Examples</span>
+        <h2 class="title is-3">Experimental Examples</h2>
         <p style="color: var(--text-secondary); margin-bottom: 2rem;">
           Omni-Fake-R1 shows significant gains in detection accuracy, cross-modal generalization, and explainability.
         </p>
@@ -694,12 +694,27 @@
         <span class="section-badge">Qualitative</span>
         <h2 class="title is-3">Qualitative Results</h2>
         <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-          Omni-Fake-R1 produces detection, localization, and natural-language explanations across all modalities.
+          Below we summarize Omni-Fake-R1 performance on the large-scale <strong>Omni-Fake-Set</strong> (in-distribution)
+          and on the held-out <strong>Omni-Fake-OOD</strong> benchmark, illustrating detection behavior under both standard
+          training coverage and out-of-distribution generalization.
         </p>
       </div>
 
-      <!-- TODO: Replace with actual qualitative result figures -->
-      <img src="static/images/qualitative_results.png" alt="Qualitative results showing detection, localization, and explanation" class="framework-img" />
+      <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto 1rem;">
+        <p style="color: var(--text-secondary);">
+          <strong>Omni-Fake-Set.</strong> Results when evaluating Omni-Fake-R1 on samples from Omni-Fake-Set, reflecting
+          performance aligned with the training distribution across modalities.
+        </p>
+      </div>
+      <img src="static/images/exp_set.png" alt="Omni-Fake-R1 results on Omni-Fake-Set" class="framework-img" />
+
+      <div class="content has-text-justified" style="max-width: 900px; margin: 2.5rem auto 1rem;">
+        <p style="color: var(--text-secondary);">
+          <strong>Omni-Fake-OOD.</strong> Results on Omni-Fake-OOD, where generators and platforms are held out from training
+          to stress-test robustness and cross-distribution generalization.
+        </p>
+      </div>
+      <img src="static/images/exp_ood.png" alt="Omni-Fake-R1 results on Omni-Fake-OOD benchmark" class="framework-img" />
     </div>
   </section>
 
