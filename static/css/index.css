@@ -290,6 +290,21 @@ body {
   font-weight: 500;
 }
 
+/* Qualitative Results: same carousel as Experimental Examples, narrower + capped image height */
+.qualitative-carousel .item {
+  padding: 1rem 1.25rem;
+}
+
+.qualitative-carousel .item img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(52vh, 520px);
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 /* Pagination and Misc Improvements */
 .slider-pagination .slider-page {
   background: var(--primary-color);

@@ -697,24 +697,28 @@
           Below we summarize Omni-Fake-R1 performance on the large-scale <strong>Omni-Fake-Set</strong> (in-distribution)
           and on the held-out <strong>Omni-Fake-OOD</strong> benchmark, illustrating detection behavior under both standard
           training coverage and out-of-distribution generalization.
+          Use the carousel controls to switch between the two figures.
         </p>
       </div>
 
-      <div class="content has-text-justified" style="max-width: 900px; margin: 0 auto 1rem;">
-        <p style="color: var(--text-secondary);">
-          <strong>Omni-Fake-Set.</strong> Results when evaluating Omni-Fake-R1 on samples from Omni-Fake-Set, reflecting
-          performance aligned with the training distribution across modalities.
-        </p>
+      <div class="columns is-centered">
+        <div class="column is-11-tablet is-10-desktop is-9-widescreen">
+          <div id="qualitative-carousel" class="carousel results-carousel qualitative-carousel">
+            <div class="item">
+              <img src="static/images/exp_set.png" alt="Omni-Fake-R1 results on Omni-Fake-Set" />
+              <h2 class="subtitle has-text-centered">
+                <strong>Omni-Fake-Set.</strong> In-distribution performance across modalities.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/exp_ood.png" alt="Omni-Fake-R1 results on Omni-Fake-OOD benchmark" />
+              <h2 class="subtitle has-text-centered">
+                <strong>Omni-Fake-OOD.</strong> Out-of-distribution generalization under held-out generators.
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
-      <img src="static/images/exp_set.png" alt="Omni-Fake-R1 results on Omni-Fake-Set" class="framework-img" />
-
-      <div class="content has-text-justified" style="max-width: 900px; margin: 2.5rem auto 1rem;">
-        <p style="color: var(--text-secondary);">
-          <strong>Omni-Fake-OOD.</strong> Results on Omni-Fake-OOD, where generators and platforms are held out from training
-          to stress-test robustness and cross-distribution generalization.
-        </p>
-      </div>
-      <img src="static/images/exp_ood.png" alt="Omni-Fake-R1 results on Omni-Fake-OOD benchmark" class="framework-img" />
     </div>
   </section>
 
