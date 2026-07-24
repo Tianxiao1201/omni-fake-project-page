@@ -303,13 +303,206 @@
       border: 2px dashed var(--border-color);
     }
 
+    /* Dataset hero button — Hugging Face accent, clearly live */
+    .button-dataset {
+      background: linear-gradient(135deg, #ffd21e 0%, #ffb020 100%) !important;
+      color: #1a1a1a !important;
+      border: none !important;
+      box-shadow: 0 4px 14px rgb(255 178 32 / 0.45) !important;
+      gap: 0.35rem;
+    }
+    .button-dataset:hover {
+      background: linear-gradient(135deg, #ffdf4d 0%, #ffc04d 100%) !important;
+      color: #0f172a !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgb(255 178 32 / 0.5) !important;
+    }
+    .button-dataset .hf-live {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #10b981;
+      color: white;
+      padding: 0.12rem 0.45rem;
+      border-radius: 999px;
+      margin-left: 0.25rem;
+      vertical-align: middle;
+    }
+
+    /* Dataset showcase cards */
+    .dataset-showcase {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin: 2.5rem 0 1rem;
+    }
+    .dataset-card {
+      position: relative;
+      background: white;
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .dataset-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+    .dataset-card--set { --card-accent: #2563eb; --card-accent-soft: #eff6ff; }
+    .dataset-card--ood { --card-accent: #7c3aed; --card-accent-soft: #f5f3ff; }
+    .dataset-card__banner {
+      height: 6px;
+      background: linear-gradient(90deg, var(--card-accent), color-mix(in srgb, var(--card-accent) 60%, #7c3aed));
+    }
+    .dataset-card__body {
+      padding: 1.75rem 1.75rem 1.25rem;
+      flex: 1;
+    }
+    .dataset-card__head {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .dataset-card__icon {
+      flex-shrink: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      background: var(--card-accent-soft);
+      color: var(--card-accent);
+    }
+    .dataset-card__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.2;
+      margin: 0 0 0.25rem;
+    }
+    .dataset-card__subtitle {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    .dataset-card__stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .dataset-stat {
+      text-align: center;
+      padding: 0.75rem 0.5rem;
+      background: var(--background-secondary);
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+    .dataset-stat__num {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--card-accent);
+      line-height: 1.2;
+    }
+    .dataset-stat__lbl {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+      line-height: 1.3;
+    }
+    .dataset-card__desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+    .dataset-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .dataset-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--card-accent-soft);
+      color: var(--card-accent);
+      border: 1px solid color-mix(in srgb, var(--card-accent) 25%, transparent);
+    }
+    .dataset-tag--muted {
+      background: var(--background-accent);
+      color: var(--text-secondary);
+      border-color: var(--border-color);
+    }
+    .dataset-card__features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.5rem;
+    }
+    .dataset-card__features li {
+      position: relative;
+      padding: 0.35rem 0 0.35rem 1.35rem;
+      font-size: 0.88rem;
+      color: var(--text-primary);
+    }
+    .dataset-card__features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: 700;
+    }
+    .dataset-card__footer {
+      padding: 1rem 1.75rem 1.5rem;
+      border-top: 1px solid var(--border-color);
+      background: var(--background-secondary);
+    }
+    .dataset-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--border-radius);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none !important;
+      color: white !important;
+      background: linear-gradient(135deg, var(--card-accent), color-mix(in srgb, var(--card-accent) 80%, #7c3aed));
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .dataset-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: white !important;
+    }
+    .dataset-cta i { font-size: 1rem; }
+
     @media screen and (max-width: 768px) {
       .modality-grid { grid-template-columns: repeat(2, 1fr); }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .stat-number { font-size: 2rem; }
+      .dataset-showcase { grid-template-columns: 1fr; }
+      .dataset-card__stats { grid-template-columns: repeat(3, 1fr); }
     }
     @media screen and (max-width: 480px) {
       .modality-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .dataset-card__stats { grid-template-columns: 1fr 1fr; }
+      .dataset-card__stats .dataset-stat:last-child { grid-column: span 2; }
     }
   </style>
 </head>
@@ -403,10 +596,10 @@
                   </a>
                 </span>
 
-                <!-- Code: not yet released — identical style, click does nothing -->
                 <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark"
-                  style="cursor: pointer;" onclick="return false;">
+                  <a href="https://github.com/Tianxiao1201/omni-fake" target="_blank"
+                  rel="noopener noreferrer"
+                  class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
                   </a>
@@ -414,9 +607,10 @@
 
                 <span class="link-block">
                   <a href="https://huggingface.co/datasets/JamalLee/Omni-Fake-SET" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+                  rel="noopener noreferrer"
+                  class="external-link button is-normal is-rounded button-dataset">
                   <span class="icon"><i class="fas fa-database"></i></span>
-                  <span>Dataset</span>
+                  <span>Dataset<span class="hf-live">Live</span></span>
                   </a>
                 </span>
               </div>
@@ -568,25 +762,114 @@
 
 
   <!-- ==================== DATASET OVERVIEW ==================== -->
-  <section class="section pipeline-section">
+  <section class="section pipeline-section" id="dataset">
     <div class="container is-max-desktop">
       <div class="has-text-centered">
         <span class="section-badge">Dataset</span>
         <h2 class="title is-3">Omni-Fake Dataset Overview</h2>
+        <p style="color: var(--text-secondary); max-width: 42rem; margin: 0.75rem auto 0;">
+          Two complementary splits for training and rigorous out-of-distribution evaluation — now on Hugging Face.
+        </p>
       </div>
 
-      <!-- TODO: Replace with your actual dataset overview figure -->
       <img src="static/images/data.png" alt="Omni-Fake dataset overview showing four modalities and data statistics" class="framework-img" />
 
-      <div class="highlight-box">
-        <strong>Omni-Fake-Set</strong> contains 1M+ high-quality samples across four modalities with fine-grained annotations
-        including binary labels, tampered region masks, temporal intervals, and human-written explanations. The dataset covers
-        a wide range of modern generators (Sora, Kling, WanX, etc.) and real-world social media post-processing pipelines.
-      </div>
+      <div class="dataset-showcase">
+        <article class="dataset-card dataset-card--set">
+          <div class="dataset-card__banner"></div>
+          <div class="dataset-card__body">
+            <div class="dataset-card__head">
+              <div class="dataset-card__icon"><i class="fas fa-layer-group"></i></div>
+              <div>
+                <h3 class="dataset-card__title">Omni-Fake-Set</h3>
+                <p class="dataset-card__subtitle">In-distribution training &amp; validation</p>
+              </div>
+            </div>
+            <div class="dataset-card__stats">
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">1M+</span>
+                <span class="dataset-stat__lbl">Samples</span>
+              </div>
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">4</span>
+                <span class="dataset-stat__lbl">Modalities</span>
+              </div>
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">CC-BY</span>
+                <span class="dataset-stat__lbl">License</span>
+              </div>
+            </div>
+            <p class="dataset-card__desc">
+              Large-scale, high-quality samples with fine-grained annotations — binary labels, tampered region masks,
+              temporal intervals, and human-written explanations across modern generators and social-media pipelines.
+            </p>
+            <div class="dataset-card__tags">
+              <span class="dataset-tag">Image</span>
+              <span class="dataset-tag">Audio</span>
+              <span class="dataset-tag">AV-TH</span>
+              <span class="dataset-tag dataset-tag--muted">Video · soon</span>
+            </div>
+            <ul class="dataset-card__features">
+              <li>Parquet shards with embedded media</li>
+              <li>Detection + localization + explanation</li>
+              <li>De-identified &amp; metadata-stripped release</li>
+            </ul>
+          </div>
+          <div class="dataset-card__footer">
+            <a href="https://huggingface.co/datasets/JamalLee/Omni-Fake-SET" target="_blank" rel="noopener noreferrer" class="dataset-cta">
+              <i class="fas fa-external-link-alt"></i>
+              Explore on Hugging Face
+            </a>
+          </div>
+        </article>
 
-      <div class="highlight-box">
-        <strong>Omni-Fake-OOD</strong> provides 100K+ out-of-distribution samples from held-out generators and platforms,
-        enabling rigorous evaluation of model robustness against unseen manipulation techniques and distribution shifts.
+        <article class="dataset-card dataset-card--ood">
+          <div class="dataset-card__banner"></div>
+          <div class="dataset-card__body">
+            <div class="dataset-card__head">
+              <div class="dataset-card__icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h3 class="dataset-card__title">Omni-Fake-OOD</h3>
+                <p class="dataset-card__subtitle">Held-out OOD benchmark</p>
+              </div>
+            </div>
+            <div class="dataset-card__stats">
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">100K+</span>
+                <span class="dataset-stat__lbl">Samples</span>
+              </div>
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">0</span>
+                <span class="dataset-stat__lbl">Train overlap</span>
+              </div>
+              <div class="dataset-stat">
+                <span class="dataset-stat__num">CC-BY</span>
+                <span class="dataset-stat__lbl">License</span>
+              </div>
+            </div>
+            <p class="dataset-card__desc">
+              Out-of-distribution samples from held-out generators and platforms — intentionally excluded from training
+              to measure cross-generator and cross-modality generalization under realistic distribution shift.
+            </p>
+            <div class="dataset-card__tags">
+              <span class="dataset-tag">Image</span>
+              <span class="dataset-tag">Audio</span>
+              <span class="dataset-tag">AV-TH</span>
+              <span class="dataset-tag dataset-tag--muted">Unseen generators</span>
+            </div>
+            <ul class="dataset-card__features">
+              <li>Strict train / test split design</li>
+              <li>Cross-platform &amp; cross-generator OOD</li>
+              <li>Same annotation protocol as SET</li>
+            </ul>
+          </div>
+          <div class="dataset-card__footer">
+            <a href="https://huggingface.co/datasets/JamalLee/Omni-Fake-OOD" target="_blank" rel="noopener noreferrer" class="dataset-cta">
+              <i class="fas fa-external-link-alt"></i>
+              Explore on Hugging Face
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
